@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Soggiorno in giardino</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <style>
+
+        body {
+            margin: 0;
+            background-color: #191a19;
+            color: #eee;
+        }
+
+        .background {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(images/hero6.jpg);
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links{
+            position: absolute;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding: 1rem;
+            animation: fade_in 2s ease-out;
+        }
+
+        .link a{
+            position: relative;
+            padding-bottom: 0.75rem;
+            color: black;
+            cursor: pointer;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            color: greenyellow;
+        }
+
+        .link a::after{
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 0;
+            bottom: 0;
+            left: 0;
+            background-color: greenyellow;
+            transition: all 0.5s ease;
+        }
+
+        .link a:hover::after{
+            width: 70%;
+        }
+
+        .title {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .background span {
+            font-family: "Playfair Display", sans-serif;
+            color: aqua;
+            font-weight: 700;
+            -webkit-text-stroke: black 1px;
+            animation: fade_in 2s ease-out;
+        }
+
+        @keyframes fade_in {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 550px) {
+            .background span {
+            font-size: 3.5em;
+            }
+        }
+
+        @media (min-width: 550px) and (max-width: 900px) {
+            .background span {
+            font-size: 4.5em;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .background span {
+            font-size: 6.5em;
+            }
+        }
+
+        .description, .fotoritocco {
+            width: 96%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .description {
+            margin-top: 32px;
+        }
+
+        .concept {
+            font-family: "Playfair Display", sans-serif;
+            color: aqua;
+            font-weight: 500;
+            font-size: 3em;
+            border-bottom: 2px solid aqua;
+        }
+
+        .description p {
+            font-family: "Inter", sans-serif;
+            font-size: 18px;
+        }
+
+        @media (max-width: 550px) {
+            .description p {
+                font-size: 16px;
+            }
+        }
+
+        .linea {
+            width: 96%;
+            border-bottom: 3px solid #464646;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            margin-bottom: 26px;
+        }
+
+        .fotoritocco img {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <ul class="nav-links">
+        <li class="link"><a href="index.html">Home</a></li>
+    </ul>
+    
+    <div class="background">
+        <div class="title">
+            <span>Soggiorno in giardino</span>
+        </div>
+        
+    </div>
+
+    <div class="description">
+        <span class="concept">Concept</span>
+        <p>Un'ampia pavimentazione posta nella parte centrale permette alla committenza di vivere il giardino nelle giornate calde 
+            e soleggiate.<br>
+            Lo specchio d'acqua che circonda la zona relax attira l'attenzione dello spettatore conferendo armonia e naturalezza.</p>
+    </div>
+    <div class="linea"></div>
+    <div class="fotoritocco">
+        <span class="concept">Render</span>
+        <img src="images/fotoritocco6.png">
+    </div>
+
+</body>
+</html>

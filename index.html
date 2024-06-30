@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Ivan Baselice | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script>
+        /*
+        window.onload = () => {
+            const img1 = document.getElementById('autocad');
+            const img2 = document.getElementById('photoshop');
+
+            img2.style.maxWidth = img1.style.width;
+
+        };
+        */
+
+    </script>
+
+    <style type="text/css">
+
+        body {
+            height: 100%;
+            margin: 0;
+            background-color: #191a19;
+        }
+
+        .background {
+            /*background-image: url(images/background.jpg);*/
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/background.jpg);
+            height: 100vh;
+            margin: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav-links{
+            position: absolute;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            padding: 1rem;
+            animation: fade_in 2s ease-out;
+        }
+
+        .link a{
+            position: relative;
+            padding-bottom: 0.75rem;
+            color: #eee;
+            cursor: pointer;
+            font-family: "Inter", sans-serif;
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .link a:hover {
+            color: greenyellow;
+        }
+
+        .link a::after{
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 0;
+            bottom: 0;
+            left: 0;
+            background-color: greenyellow;
+            transition: all 0.3s ease;
+        }
+
+        .link a:hover::after{
+            width: 70%;
+        }
+
+        .title {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .title1, .title2 {
+            display: block;
+            font-family: "Playfair Display", sans-serif;
+            color: #dad3de;
+            font-weight: 700;
+            -webkit-text-stroke: black 1px;
+            animation: fade_in 2s ease-out;
+        }
+
+        @keyframes fade_in {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 550px) {
+            .title1 {
+            font-size: 3.5em;
+            }
+
+            .title2 {
+            font-size: 2.5em;
+            }
+        }
+
+        @media (min-width: 550px) and (max-width: 900px) {
+            .title1 {
+            font-size: 4.5em;
+            }
+
+            .title2 {
+            font-size: 3em;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .title1 {
+            font-size: 6.5em;
+            }
+
+            .title2 {
+            font-size: 3.5em;
+            }
+        }
+        
+        .mainSection {
+            background-color: #191a19;
+            color: #eee;
+        }
+
+        .mainSection p {
+            font-family: "Playfair Display", sans-serif;
+            text-align: center;
+            font-size: 64px;
+        }
+
+        .section1 {
+            display: grid;
+            margin-top: 4%;
+            margin-left: 2%;
+            margin-right: 2%;
+            grid-template-columns: 1fr 2fr;
+        }
+
+        @media (max-width: 1200px) {
+            .section1 {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 32px;
+            font-family: "Inter", sans-serif;
+            color: #eee;
+        }
+
+        @media (max-width: 800px) {
+            .skills {
+                grid-template-columns: 1fr;
+            }
+
+            .element {
+                max-width: 60%;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .element {
+                max-width: 60%;
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .element {
+            width: 75%;
+            margin: auto;
+            border-radius: 1em;
+            padding: 4%;
+            text-align: center;
+            background: #27272a;
+            height: 100%;
+            box-shadow: 0;
+            border: 2px solid green;
+            transition: all 0.5s ease;
+        }
+
+        .element:hover {
+            background: #323232;
+        }
+
+        .element img {
+            max-width: 20%;
+        }
+
+        .element span {
+            display: block;
+        }
+
+        .year {
+            font-family: "Playfair Display", sans-serif;
+            font-size: 56px;
+            margin-top: -4%;
+        }
+
+        .icone {
+            display: flex;
+            justify-content: center;
+        }
+
+        #autocad {
+            margin-right: 2%;
+        }
+
+        #photoshop {
+            margin-left: 2%;
+        }
+
+        #span1, #spanCadPs, #span4 {
+            margin-top: 3%;
+        }
+
+        .image {
+            background-image: url(images/portrait.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            min-height: 200px;
+            min-width: 200px;
+        }
+
+        .gridContainer {
+            display: grid;
+            width: 96%;
+            grid-auto-rows: auto;
+            margin-left: auto;
+            margin-right: auto;
+            justify-items: center;
+            gap: 16px;
+            row-gap: 32px;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @media (max-width: 1400px) {
+            .gridContainer {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .gridContainer {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .project {
+                width: 350px;
+            }
+
+            .project img {
+                width: 350px;
+            }
+        }
+
+        .project {
+            border: 2px solid transparent;
+            padding: 1rem;
+            background-color: #27272a;
+            border-radius: 20px;
+            transition: all 0.5s ease;
+            max-width: 400px;
+        }
+
+        .project:hover {
+            background-color: #323232;
+            border-color: green;
+        }
+ 
+        .project span {
+            display: block;
+            font-family: "Inter", sans-serif;
+            color: #eee;
+        }
+
+        .projectTitle {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project img {
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 10px 20px;
+            background-color: #181818;
+            color: #eee;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 10px;
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            transition: all 0.5s ease;
+        }
+
+        .button:hover{
+            background-color: green;
+        }
+
+        .contatti {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            justify-items: center;
+            gap: 20px;
+        }
+
+        @media (max-width: 1000px) {
+            .contatti {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .email, .telefono, .indirizzo {
+            display: flex;
+            border: 2px solid blue;
+            font-family: "Inter", sans-serif;
+            align-items: center;
+            width: 275px;
+            justify-content: center;
+            padding: 12px;
+            border-radius: 1em;
+            background: #27272a;
+            border: 2px solid green;
+            transition: all 0.5s ease;
+        }
+
+        .email:hover, .telefono:hover, .indirizzo:hover {
+            background: #323232;
+        }
+
+        .iconaContatti {
+            max-width: 56px;
+        }
+
+        .email span, .telefono span, .indirizzo span {
+            margin-left: 12px;
+        }
+    
+    </style>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('.link');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetClass = this.getAttribute('data-target');
+                    const targetElement = document.querySelector(`.${targetClass}`);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+
+    </script>
+    
+</head>
+<body>
+
+        <ul class="nav-links">
+            <li class="link" data-target="mainSection"><a href="#">Chi sono</a></li>
+            <li class="link" data-target="sezione2"><a href="#">I miei progetti</a></li>
+            <li class="link" data-target="sezione3"><a href="#">Contatti</a></li>
+        </ul>
+
+    <div class="background">
+        <div class="title">
+            <span class="title1">Ivan Baselice</span>
+            <span class="title2">Progettista del verde</span>
+        </div>
+    </div>
+
+    <div class="mainSection">
+        <p>Chi sono</p>
+        <div class="section1">
+            <div class="image">
+            </div>
+            <div class="skills">
+                <div class="card">
+                    <div class="element">
+                        <img src="icons/certificate.png" class="icon1">
+                        <span id="span1">Certificato di "Progettista del verde"</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="element">
+                        <div class="icone">
+                            <img src="icons/autocad.png" id="autocad">
+                            <img src="icons/photoshop.png" id="photoshop">
+                        </div>
+                        <span id="spanCadPs">Certificato di Autocad & Photoshop</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="element">
+                        <img src="icons/graduation.png" class="icon1">
+                        <span>Studente di Agraria presso "Università degli Studi di Milano"</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="element">
+                        <span class="year">4+</span>
+                        <span id="span4">Anni di esperienza nel settore del verde</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="sezione2">I miei progetti</p>
+        <div class="gridContainer">
+
+            <div class="project">
+                <img src="images/thumb1.jpg">
+                <span class="projectTitle">Verde retrospettivo</span>
+                <span>
+                    Il giardino di una proprietà privata, garanatisce
+                    privacy e sicurezza.
+                </span>
+                <a class="button" href="verde_retrospettivo.html">Apri</a>
+            </div>
+
+            <div class="project">
+                <img src="images/thumb2.jpg">
+                <span class="projectTitle">Green corner in the sky</span>
+                <span>
+                    Un angolo di verde con un design moderno.
+                </span>
+                <a class="button" href="green_corner.html">Apri</a>
+            </div>
+
+            <div class="project">
+                <img src="images/thumb3.jpg">
+                <span class="projectTitle">Giardino del sole</span>
+                <span>
+                    Un giardino per ammirare le fioriture delle specie floreali.
+                </span>
+                <a class="button" href="giardino_sole.html">Apri</a>
+            </div>
+
+            <div class="project">
+                <img src="images/thumb4.jpg">
+                <span class="projectTitle">Gush of water</span>
+                <span>
+                    Uno spazio verde per tutti i sensi.
+                </span>
+                <a class="button" href="gush_of_water.html">Apri</a>
+            </div>
+
+            <div class="project">
+                <img src="images/thumb5.jpg">
+                <span class="projectTitle">Un angolo di pace</span>
+                <span>
+                    Un posto di serenità e relax.
+                </span>
+                <a class="button" href="angolo_pace.html">Apri</a>
+            </div>
+
+            <div class="project">
+                <img src="images/thumb6.jpg">
+                <span class="projectTitle">Soggiorno in giardino</span>
+                <span>
+                    Uno spazio con tutte le comodità al centro di un giardino.
+                </span>
+                <a class="button" href="soggiorno_giardino.html">Apri</a>
+            </div>
+            
+        </div>
+
+        <p class="sezione3">Contattami</p>
+        <div class="contatti">
+            <div class="email">
+                <img src="icons/email.png" class="iconaContatti">
+                <span>ivanbaselice@gmail.com</span>
+            </div>
+            <div class="telefono">
+                <img src="icons/phone.png" class="iconaContatti">
+                <span>+39 345 3245 932</span>
+            </div>
+            <div class="indirizzo">
+                <img src="icons/address.png" class="iconaContatti">
+                <span>Carate Brianza (MB)</span>
+            </div>
+        </div>
+
+    </div>
+
+    <br><br><br>
+
+</body>
+</html>
