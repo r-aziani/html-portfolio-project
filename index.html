@@ -12,19 +12,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-    <script>
-        /*
-        window.onload = () => {
-            const img1 = document.getElementById('autocad');
-            const img2 = document.getElementById('photoshop');
-
-            img2.style.maxWidth = img1.style.width;
-
-        };
-        */
-
-    </script>
-
     <style type="text/css">
 
         body {
@@ -34,7 +21,6 @@
         }
 
         .background {
-            /*background-image: url(images/background.jpg);*/
             background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(images/background.jpg);
             height: 100vh;
             margin: 0;
@@ -96,8 +82,7 @@
             display: block;
             font-family: "Playfair Display", sans-serif;
             color: #dad3de;
-            font-weight: 700;
-            -webkit-text-stroke: black 1px;
+            font-weight: 800;
             animation: fade_in 2s ease-out;
         }
 
@@ -114,6 +99,19 @@
             .title2 {
             font-size: 2.5em;
             }
+
+            .element {
+                border: 1.5px solid darkgreen;
+            }
+
+            .project {
+                border: 1.5px solid transparent;
+            }
+
+            .email, .telefono, .indirizzo {
+                border: 1.5px solid darkgreen;
+            }
+
         }
 
         @media (min-width: 550px) and (max-width: 900px) {
@@ -144,7 +142,7 @@
         .mainSection p {
             font-family: "Playfair Display", sans-serif;
             text-align: center;
-            font-size: 64px;
+            font-size: 60px;
         }
 
         .section1 {
@@ -200,8 +198,9 @@
             background: #27272a;
             height: 100%;
             box-shadow: 0;
-            border: 2px solid green;
+            border: 2px solid darkgreen;
             transition: all 0.5s ease;
+            box-shadow: 0 0 1.5em 0.5em black;
         }
 
         .element:hover {
@@ -294,7 +293,8 @@
 
         .project:hover {
             background-color: #323232;
-            border-color: green;
+            border-color: darkgreen;
+            box-shadow: 0 0 1.5em 0.5em black;
         }
  
         .project span {
@@ -332,7 +332,7 @@
         }
 
         .button:hover{
-            background-color: green;
+            background-color: darkgreen;
         }
 
         .contatti {
@@ -353,7 +353,6 @@
 
         .email, .telefono, .indirizzo {
             display: flex;
-            border: 2px solid blue;
             font-family: "Inter", sans-serif;
             align-items: center;
             width: 275px;
@@ -361,7 +360,8 @@
             padding: 12px;
             border-radius: 1em;
             background: #27272a;
-            border: 2px solid green;
+            border: 2px solid darkgreen;
+            box-shadow: 0 0 1.5em 0.5em black;
             transition: all 0.5s ease;
         }
 
@@ -375,6 +375,14 @@
 
         .email span, .telefono span, .indirizzo span {
             margin-left: 12px;
+        }
+
+        .linea {
+            width: 96%;
+            border-bottom: 3px solid #464646;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 96px;
         }
     
     </style>
@@ -452,17 +460,18 @@
             </div>
         </div>
 
+        <div class="linea"></div>
+
         <p class="sezione2">I miei progetti</p>
         <div class="gridContainer">
 
             <div class="project">
-                <img src="images/thumb1.jpg">
-                <span class="projectTitle">Verde retrospettivo</span>
+                <img src="images/thumb5.jpg">
+                <span class="projectTitle">Un angolo di pace</span>
                 <span>
-                    Il giardino di una proprietà privata, garanatisce
-                    privacy e sicurezza.
+                    Un posto di serenità e relax.
                 </span>
-                <a class="button" href="verde_retrospettivo.html">Apri</a>
+                <a class="button" href="angolo_pace.html">Apri</a>
             </div>
 
             <div class="project">
@@ -484,6 +493,15 @@
             </div>
 
             <div class="project">
+                <img src="images/thumb6.jpg">
+                <span class="projectTitle">Soggiorno in giardino</span>
+                <span>
+                    Uno spazio con tutte le comodità al centro di un giardino.
+                </span>
+                <a class="button" href="soggiorno_giardino.html">Apri</a>
+            </div>
+
+            <div class="project">
                 <img src="images/thumb4.jpg">
                 <span class="projectTitle">Gush of water</span>
                 <span>
@@ -493,34 +511,28 @@
             </div>
 
             <div class="project">
-                <img src="images/thumb5.jpg">
-                <span class="projectTitle">Un angolo di pace</span>
+                <img src="images/thumb1.jpg">
+                <span class="projectTitle">Verde retrospettivo</span>
                 <span>
-                    Un posto di serenità e relax.
+                    Il giardino di una proprietà privata, garanatisce
+                    privacy e sicurezza.
                 </span>
-                <a class="button" href="angolo_pace.html">Apri</a>
-            </div>
-
-            <div class="project">
-                <img src="images/thumb6.jpg">
-                <span class="projectTitle">Soggiorno in giardino</span>
-                <span>
-                    Uno spazio con tutte le comodità al centro di un giardino.
-                </span>
-                <a class="button" href="soggiorno_giardino.html">Apri</a>
+                <a class="button" href="verde_retrospettivo.html">Apri</a>
             </div>
             
         </div>
 
-        <p class="sezione3">Contattami</p>
+        <div class="linea"></div>
+
+        <p class="sezione3">I miei contatti</p>
         <div class="contatti">
             <div class="email">
                 <img src="icons/email.png" class="iconaContatti">
-                <span>ivanbaselice@gmail.com</span>
+                <span>ivanbaselice01sp@gmail.com</span>
             </div>
             <div class="telefono">
                 <img src="icons/phone.png" class="iconaContatti">
-                <span>+39 345 3245 932</span>
+                <span>+39 333 841 9235</span>
             </div>
             <div class="indirizzo">
                 <img src="icons/address.png" class="iconaContatti">
